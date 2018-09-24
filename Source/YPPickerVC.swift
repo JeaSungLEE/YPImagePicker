@@ -66,7 +66,7 @@ public class YPPickerVC: YPBottomPager, YPBottomPagerDelegate {
             cameraVC = YPCameraVC()
             cameraVC?.didCapturePhoto = { [weak self] img in
                 self?.didSelectItems?([YPMediaItem.photo(p: YPMediaPhoto(image: img,
-                                                                        fromCamera: true))])
+                                                                         fromCamera: true))])
             }
         }
         
@@ -171,7 +171,7 @@ public class YPPickerVC: YPBottomPager, YPBottomPagerDelegate {
         } else if let videoVC = vc as? YPVideoCaptureVC {
             videoVC.start()
         }
-    
+        
         updateUI()
     }
     
@@ -266,19 +266,20 @@ public class YPPickerVC: YPBottomPager, YPBottomPagerDelegate {
     
     func updateUI() {
         // Update Nav Bar state.
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: YPConfig.wordings.cancel,
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "취소",
                                                            style: .plain,
                                                            target: self,
                                                            action: #selector(close))
+        navigationItem.leftBarButtonItem?.tintColor = UIColor(r: 112, g: 112, b: 112)
         
         switch mode {
         case .library:
             setTitleViewWithTitle(aTitle: libraryVC?.title ?? "")
-            navigationItem.rightBarButtonItem = UIBarButtonItem(title: YPConfig.wordings.next,
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "다음",
                                                                 style: .done,
                                                                 target: self,
                                                                 action: #selector(done))
-            navigationItem.rightBarButtonItem?.tintColor = YPConfig.colors.tintColor
+            navigationItem.rightBarButtonItem?.tintColor = UIColor(r: 249, g: 32, b: 39)
             
             // Disable Next Button until minNumberOfItems is reached.
             let minNumberOfItems = YPConfig.library.minNumberOfItems
