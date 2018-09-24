@@ -195,6 +195,7 @@
 		EBD66104208104EA00EA276E /* YPIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YPIcons.swift; sourceTree = "<group>"; };
 		EBD66106208104F400EA276E /* YPColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YPColors.swift; sourceTree = "<group>"; };
 		EBE6CA47210389ED005B0A6A /* CIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CIImage+Extensions.swift"; sourceTree = "<group>"; };
+		EFB46F6B2158DF3B005C6DA4 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -523,6 +524,7 @@
 				"zh-Hans",
 				id,
 				bg,
+				ko,
 			);
 			mainGroup = 52412A891CA6114A0073C4BE;
 			productRefGroup = 52412A941CA6114A0073C4BE /* Products */;
@@ -673,6 +675,7 @@
 				5F01F9DC20DCC494007432E4 /* zh-Hans */,
 				65BBCBAE2101BA4200277809 /* id */,
 				16550C5C214D5EE60090BADF /* bg */,
+				EFB46F6B2158DF3B005C6DA4 /* ko */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
